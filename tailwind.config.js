@@ -17,6 +17,7 @@ module.exports = {
         blob1: "blob 7s infinite",
         blob2: "blob 7s infinite 2s",
         blob3: "blob 7s infinite 4s",
+        float: "float 6s infinite",
       },
       keyframes: {
         blob: {
@@ -31,6 +32,23 @@ module.exports = {
           },
           "100%": {
             transform: "scale(1)",
+          },
+        },
+        float: {
+          "0%": {
+            transform: "translateY(0px)",
+          },
+          "25%": {
+            transform: "translateY(-12px)",
+          },
+          "50%": {
+            transform: "translateY(0px)",
+          },
+          "75%": {
+            transform: "translateY(-8px)",
+          },
+          "100%": {
+            transform: "translateY(0px)",
           },
         },
       },

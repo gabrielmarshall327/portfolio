@@ -38,7 +38,7 @@ export default function Navbar() {
           className=" p-4"
         >
           <a className=" cursor-pointer" href={links[0].hash}>
-            <Image className=" w-14" src={Logo} alt="Logo" />
+            <Image className=" w-14" src={Logo} alt="Logo" priority={true} />
           </a>
         </motion.div>
         <div className=" hidden md:inline-flex">

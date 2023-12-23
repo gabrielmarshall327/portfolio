@@ -24,9 +24,9 @@ export default function Hero() {
         </motion.h3>
       </div>
       <div className="flex flex-row justify-center  max-md:hidden">
-        <div className="absolute top-1/3 mr-96 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob1"></div>
-        <div className="absolute top-1/3 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob2 "></div>
-        <div className="absolute top-1/3 ml-96 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob3 "></div>
+        <div className="absolute top-1/3 mr-96 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-2xl opacity-100 animate-blob1"></div>
+        <div className="absolute top-1/3 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-2xl opacity-100 animate-blob2 "></div>
+        <div className="absolute top-1/3 ml-96 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-2xl opacity-100 animate-blob3 "></div>
       </div>
     </div>
   );
