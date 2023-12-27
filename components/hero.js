@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <div className=" bg-darkbg h-screen">
+    <div className=" bg-darkbg h-screen scroll-m-[100rem]" id="home">
       <div className=" max-w-5xl mx-auto md:py-24 py-10">
         <motion.h3
           initial={{ y: 20, opacity: 0 }}

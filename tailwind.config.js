@@ -12,6 +12,7 @@ module.exports = {
       },
       backgroundColor: {
         darkbg: "#2d3436",
+        projectsbg: "#3b4547",
       },
       animation: {
         blob1: "blob 7s infinite",
