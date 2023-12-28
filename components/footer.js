@@ -36,7 +36,10 @@ export default function Footer() {
       <div className="text-white">
         <p>
           Designed and Made by{" "}
-          <a href="#home" className="underline">
+          <a
+            href="#home"
+            className="underline hover:text-purple-400 transition-all duration-300"
+          >
             Gabriel
           </a>
         </p>
