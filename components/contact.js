@@ -1,9 +1,33 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
 export default function Contact() {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_serviceID,
+        process.env.NEXT_PUBLIC_templateID,
+        form.current,
+        process.env.NEXT_PUBLIC_pubKey
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Error sending message. Please try again later.");
+        }
+      );
+  };
   return (
     <div className=" scroll-m-8" id="contact">
       <div className="md:py-24 py-10">
@@ -20,30 +44,27 @@ export default function Contact() {
               </h3>
               <span className="block border-b-2 border-purple-400 w-16 h-0 my-2 mb-6 mx-auto"></span>
             </div>
-            <form className="text-left p-8 pb-12">
-              <label htmlFor="fullName" className="input-header block mb-2">
-                Name
-              </label>
+            <form
+              className="text-left p-8 pb-12"
+              onSubmit={sendEmail}
+              ref={form}
+            >
+              <label className="input-header block mb-2">Name</label>
               <input
                 type="text"
-                id="fullName"
                 className="w-full bg-projectsbg p-4 border-b border-gray-500"
                 required
                 placeholder="Your name"
+                name="user_name"
               />
 
-              <label
-                htmlFor="email_id"
-                className="input-header block mb-2 mt-8"
-              >
-                Email
-              </label>
+              <label className="input-header block mb-2 mt-8">Email</label>
               <input
                 type="text"
-                id="email_id"
                 className="w-full bg-projectsbg p-4 border-b border-gray-500"
                 required
                 placeholder="Your email"
+                name="user_email"
               />
 
               <label htmlFor="message" className="input-header block mb-2 mt-8">
@@ -61,7 +82,7 @@ export default function Contact() {
               <br />
               <div className="mt-8 flex justify-end">
                 <button
-                  type="button"
+                  type="submit"
                   className="bg-purple-500 text-white w-24 border-none outline-none p-2"
                 >
                   Send
