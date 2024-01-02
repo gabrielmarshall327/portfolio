@@ -25,6 +25,7 @@ export default function Contact() {
         (error) => {
           console.log(error.text);
           alert("Error sending message. Please try again later.");
+          form.current.reset();
         }
       );
   };
