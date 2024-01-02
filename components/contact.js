@@ -14,7 +14,7 @@ export default function Contact() {
         process.env.NEXT_PUBLIC_serviceID,
         process.env.NEXT_PUBLIC_templateID,
         form.current,
-        process.env.NEXT_PUBLIC_pubKey
+        process.env.NEXT_PUBLIC_publicKey
       )
       .then(
         (result) => {
