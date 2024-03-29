@@ -23,7 +23,7 @@ export default function Hero() {
           transition={{ duration: 0.4, delay: 0.8 }}
           className=" text-5xl text-purple-400 pb-8"
         >
-          I'm a full-stack web developer
+          I am a full-stack web developer
         </motion.h3>
         <motion.h3
           initial={{ y: 20, opacity: 0 }}
