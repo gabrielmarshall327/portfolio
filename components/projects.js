@@ -7,7 +7,7 @@ import { projectsData } from "@/lib/data";
 
 export default function Projects() {
   return (
-    <div className=" md:pt-24 py-10 scroll-m-8" id="projects">
+    <div className=" md:pt-24 py-10 scroll-m-8 z-10" id="projects">
       <div className=" items-center max-w-5xl mx-auto ">
         <motion.div
           initial={{ y: 20, opacity: 0 }}
@@ -16,7 +16,7 @@ export default function Projects() {
           viewport={{ once: true }}
         >
           <h3 className=" text-4xl text-purple-400 pb-2 text-center">
-            Projects!
+            Projects
           </h3>
           <span className="block border-b-2 border-purple-400 w-16 h-0 my-2 mb-6 mx-auto"></span>
         </motion.div>
@@ -29,12 +29,16 @@ export default function Projects() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.5 }}
               viewport={{ once: true }}
-              className="bg-projectsbg max-w-[90%] mx-auto mb-3 md:mb-8 border border-black/5 rounded-lg overflow-hidden relative sm:h-[20rem] hover:bg-darkbg transition min-h-80 group"
+              className="lg:bg-projectsbg max-lg:border-1 max-lg:border-black max-lg:relative max-w-[90%] mx-auto mb-3 md:mb-8 border border-black/5 rounded-lg overflow-hidden relative sm:h-[20rem] hover:bg-darkbg transition group"
             >
-              <div className="py-4 px-5 group-even:pl-0 max-w-[45%] flex flex-col h-full group-even:ml-[32rem]">
-                <h4 className="text-xl font-semibold pb-2">{project.title}</h4>
-                <p className="pb-4">{project.description}</p>
-                <ul className="flex flex-wrap gap-2 pb-4">
+              <div className="py-4 px-5 max-w-[45%] max-lg:max-w-full flex flex-col h-full group-even:ml-[31rem] max-lg:group-even:ml-0 ">
+                <h4 className="text-xl font-semibold pb-2 max-lg:text-center max-lg:z-50">
+                  {project.title}
+                </h4>
+                <p className="pb-4 max-lg:pb-6 max-lg:z-50">
+                  {project.description}
+                </p>
+                <ul className="flex flex-wrap gap-2 pb-4 max-lg:z-50">
                   {project.buttons.map((button, buttonIndex) => (
                     <li
                       key={`button-${index}-${buttonIndex}`}
@@ -50,7 +54,7 @@ export default function Projects() {
                   {project.tags.map((tag, tagIndex) => (
                     <li
                       key={`tag-${index}-${tagIndex}`}
-                      className="bg-black/50 text-white rounded-full px-3 py-1"
+                      className="bg-black/50 max-lg:bg-black/100 text-white rounded-full px-3 py-1"
                     >
                       {tag}
                     </li>
@@ -60,7 +64,7 @@ export default function Projects() {
               <Image
                 src={project.imageUrl}
                 alt="Project Picture"
-                className=" absolute top-8 -right-0 group-even:-left-0 w-[30rem]"
+                className=" absolute top-8 -right-0 group-even:-left-0 w-[30rem] max-lg:w-max max-lg:top-0 max-lg:opacity-5 max-lg:z-40"
               />
             </motion.div>
           ))}

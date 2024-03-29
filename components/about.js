@@ -20,9 +20,9 @@ export default function About() {
     <div className="scroll-m-8" id="about">
       <div className="max-w-5xl mx-auto md:pt-24 pt-10">
         <div>
-          <div className=" flex flex-row gap-20 max-md:flex-col max-md:max-w-[90%] mx-auto">
+          <div className=" flex flex-row gap-20 max-lg:gap-4 max-lg:flex-col max-lg:max-w-[90%] mx-auto">
             <motion.div
-              className=" w-80 basis-1/3"
+              className=" w-80 max-md:w-64 basis-1/3 max-lg:mx-auto"
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.2 }}
@@ -30,7 +30,7 @@ export default function About() {
             >
               <Image
                 src={Selfie}
-                className=" w-80 rounded-full"
+                className=" w-80 rounded-full "
                 alt="Picture of Gabe"
                 priority={true}
               />
@@ -42,21 +42,20 @@ export default function About() {
               transition={{ duration: 0.4, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <h3 className=" text-4xl text-purple-400 pb-2">
-                A bit about me!
+              <h3 className=" text-4xl text-purple-400 pb-2 max-md:text-center">
+                A bit about me
               </h3>
-              <span className="block border-b-2 border-purple-400 w-16 h-0 my-2"></span>
+              <span className="block border-b-2 border-purple-400 w-16 h-0 my-2 max-md:mx-auto"></span>
 
               <p className=" pt-4 text-xl">
-                I am a Computer Engineering at Texas A&M with a minor in
-                mathematics and game developement. I have experience with
-                full-stack development with technologies such as React,
+                I am a Computer Engineering student at Texas A&M with a minor in
+                mathematics and game developement. I have full-stack
+                developement experience with technologies such as React,
                 PostgreSQL and Node.js.{" "}
               </p>
               <p className=" pt-4 text-xl">
-                I am also a diehard Minnesota Vikings fan(very unfortunate) and
-                starting to dive into game development from my love of video
-                games.{" "}
+                I am also a diehard Minnesota Vikings fan and starting to dive
+                into game development and graphics engineering.{" "}
               </p>
             </motion.div>
           </div>
@@ -78,7 +77,7 @@ export default function About() {
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
                   viewport={{ once: true }}
-                  className=" text-[100px] max-md:text-[50px] text-purple-400 px-4 animate-float hover:text-white transition-all duration-300 flex flex-col items-center"
+                  className=" text-[100px] max-md:text-[60px] text-purple-400 px-4 animate-float hover:text-white transition-all duration-300 flex flex-col items-center"
                   onMouseEnter={() => handleHover(index)}
                   onMouseLeave={handleMouseLeave}
                 >

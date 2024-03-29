@@ -10,6 +10,7 @@ import Logo from "@/public/logo.png";
 
 export default function Navbar() {
   const [hasShadow, setHasShadow] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +24,10 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <div
@@ -61,7 +66,54 @@ export default function Navbar() {
             ))}
           </ul>
         </div>
-        <div className=" md:hidden p-4">hi</div>
+        <div className=" md:hidden p-4">
+          <button
+            onClick={toggleMobileMenu}
+            className="flex flex-col justify-center items-center"
+          >
+            <span
+              className={`bg-white block transition-all duration-300 ease-out 
+                    h-1 w-8 rounded-sm my-1 ${
+                      isMobileMenuOpen
+                        ? "rotate-45 translate-y-2"
+                        : "-translate-y-1"
+                    }`}
+            ></span>
+            <span
+              className={`bg-white block transition-all duration-300 ease-out 
+                    h-1 w-8 rounded-sm my-[0.5] ${
+                      isMobileMenuOpen ? "opacity-0" : "opacity-100"
+                    }`}
+            ></span>
+            <span
+              className={`bg-white block transition-all duration-300 ease-out 
+                    h-1 w-8 rounded-sm my-1 ${
+                      isMobileMenuOpen
+                        ? "-rotate-45 -translate-y-2"
+                        : "translate-y-1"
+                    }`}
+            ></span>
+          </button>
+          {isMobileMenuOpen && (
+            <div className="absolute top-16 right-0 bg-white shadow-md mr-4 mt-2 rounded-md">
+              <ul>
+                {links.map((link, index) => (
+                  <li key={link.hash}>
+                    <Link
+                      href={link.hash}
+                      className={`block py-2 px-4 text-purple-400 transition-colors duration-200 text-center border-t-[1px] border-black ${
+                        index == 0 ? "border-t-0" : "border-t-2 border-black"
+                      }`}
+                      onClick={toggleMobileMenu}
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

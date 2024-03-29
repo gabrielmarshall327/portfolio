@@ -41,7 +41,7 @@ export default function Contact() {
           <div className=" border border-black shadow-2xl mx-auto max-w-2xl w-[90%]">
             <div className="mt-8">
               <h3 className=" text-4xl text-purple-400 pb-2 text-center">
-                Contact Me!
+                Contact Me
               </h3>
               <span className="block border-b-2 border-purple-400 w-16 h-0 my-2 mb-6 mx-auto"></span>
             </div>
