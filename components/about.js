@@ -49,8 +49,14 @@ export default function About() {
 
               <p className=" pt-4 text-xl">
                 I am a Computer Engineering at Texas A&M with a minor in
-                mathematics. I have experience with full-stack development with
-                technologies such as React, PostgreSQL and Node.js.{" "}
+                mathematics and game developement. I have experience with
+                full-stack development with technologies such as React,
+                PostgreSQL and Node.js.{" "}
+              </p>
+              <p className=" pt-4 text-xl">
+                I am also a diehard Minnesota Vikings fan(very unfortunate) and
+                starting to dive into game development from my love of video
+                games.{" "}
               </p>
             </motion.div>
           </div>
@@ -62,7 +68,7 @@ export default function About() {
               transition={{ duration: 0.4, delay: 0.5 }}
               viewport={{ once: true }}
             >
-              Some skills I am proficient in!
+              Technologies I am proficient in:
             </motion.h4>
             <div className=" flex flex-row flex-wrap justify-center gap-4 max-w-xl mx-auto">
               {skills.map((skill, index) => (
