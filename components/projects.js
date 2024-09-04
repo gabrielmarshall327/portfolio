@@ -64,7 +64,7 @@ export default function Projects() {
               <Image
                 src={project.imageUrl}
                 alt="Project Picture"
-                className=" absolute top-8 -right-0 group-even:-left-0 w-[30rem] max-lg:w-max max-lg:top-0 max-lg:opacity-5 max-lg:z-40"
+                className=" absolute top-8 -right-0 group-even:-left-0 w-[30rem] h-[235px] max-lg:w-max max-lg:top-0 max-lg:opacity-5 max-lg:z-40"
               />
             </motion.div>
           ))}
