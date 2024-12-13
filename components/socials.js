@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function Socials() {
   return (
-    <div className=" fixed right-0 top-1/2 -translate-y-1/2 p-8 max-lg:hidden">
+    <div className="fixed right-0 top-1/2 -translate-y-1/2 p-8 max-lg:hidden z-50">
       <div className="flex flex-col gap-4">
         <motion.a
           href="https://github.com/gabrielmarshall327/"

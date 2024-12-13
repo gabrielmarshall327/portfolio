@@ -25,7 +25,7 @@ export default function About() {
               className=" w-80 max-md:w-64 basis-1/3 max-lg:mx-auto"
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               viewport={{ once: true }}
             >
               <Image
@@ -39,7 +39,7 @@ export default function About() {
               className=" basis-1/2"
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.4 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
               viewport={{ once: true }}
             >
               <h3 className=" text-4xl text-purple-400 pb-2 max-md:text-center">
@@ -64,7 +64,7 @@ export default function About() {
               className=" pb-8 text-2xl text-center"
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.5 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
               viewport={{ once: true }}
             >
               Technologies I am proficient in:
@@ -75,7 +75,7 @@ export default function About() {
                   key={skill.name}
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+                  transition={{ duration: 0.4, delay: 0.3 + index * 0.05 }}
                   viewport={{ once: true }}
                   className=" text-[100px] max-md:text-[60px] text-purple-400 px-4 animate-float hover:text-white transition-all duration-300 flex flex-col items-center"
                   onMouseEnter={() => handleHover(index)}

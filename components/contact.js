@@ -35,7 +35,7 @@ export default function Contact() {
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.4, delay: 0.3 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
           viewport={{ once: true }}
         >
           <div className=" border border-black shadow-2xl mx-auto max-w-2xl w-[90%]">

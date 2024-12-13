@@ -27,7 +27,7 @@ export default function Projects() {
               key={project.title}
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.5 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
               viewport={{ once: true }}
               className="lg:bg-projectsbg max-lg:border-1 max-lg:border-black max-lg:relative max-w-[90%] mx-auto mb-3 md:mb-8 border border-black/5 rounded-lg overflow-hidden relative sm:h-[20rem] hover:bg-darkbg transition group"
             >
